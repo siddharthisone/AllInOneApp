@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#373333"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -14,278 +14,97 @@
         android:layout_height="wrap_content"
         app:title="Main Menu"
         app:titleMarginStart="64sp"
-        android:background="#272020"
+        android:background="#0E3057"
         app:titleTextColor="@color/white"
         app:titleTextAppearance="@style/MyToolbarTitleText"
         app:navigationIcon="@drawable/baseline_menu_24"
         app:navigationContentDescription="@string/youtube"
         />
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/horizontalIcons"
-        android:layout_marginTop="50dp"
-        android:scrollbars="none">
+        android:layout_height="600dp"
+        android:fillViewport="true">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/instagramIcon"
-                android:layout_marginStart="33dp"
-                android:src="@drawable/instagram"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/instagram"
-                />
 
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/faceBookIcon"
-                android:layout_marginStart="44dp"
-                android:src="@drawable/facebook"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/facebook"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent apps"
+                android:fontFamily="@font/abeezee"
+                android:textSize="14sp"
+                android:textColor="#80000000"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
                 />
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="44dp"
-                android:id="@+id/twitter"
-                android:src="@drawable/twitter"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/twitter"
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:id="@+id/myRecyclerView"
+      />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top Apps"
+                android:fontFamily="@font/abeezee"
+                android:textSize="14sp"
+                android:textColor="#80000000"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
                 />
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/linkedInIcon"
-                android:src="@drawable/linkedin"
-                android:layout_marginStart="44dp"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/linkedin"
-                />
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="44dp"
-                android:id="@+id/youtube"
-                android:src="@drawable/youtube"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/youtube"
-                />
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="44dp"
-                android:id="@+id/youtube1"
-                android:src="@drawable/youtube"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/youtube"
-                />
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="44dp"
-                android:id="@+id/youtube2"
-                android:src="@drawable/youtube"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/youtube"
-                />
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="44dp"
-                android:id="@+id/youtube3"
-                android:src="@drawable/youtube"
-                android:scaleType="centerInside"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/youtube"
-                />
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <GridLayout
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="22dp"
-        android:columnCount="2">
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:backgroundTint="#10384C"
-            android:clickable="true"
-            android:focusable="true"
-          app:cardElevation="22dp"
-            >
-            <LinearLayout
-                android:layout_width="wrap_content"
+        android:id="@+id/myRecyclerViewCard1"
+        />
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-                <ImageButton
-                    android:id="@+id/instagramCard"
-                    android:layout_width="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="50dp"
-                    android:background="#00FFFFFF"
-                    android:contentDescription="@string/instagram"
-                    android:scaleType="centerInside"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/instagram" />
-                <TextView
-                    android:layout_width="wrap_content"
+                android:text="Hot picks"
+                android:fontFamily="@font/abeezee"
+                android:textSize="14sp"
+                android:textColor="#80000000"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                />
+         <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/myRecyclerViewCard2"
+        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Apps"
+                android:fontFamily="@font/abeezee"
+                android:textSize="14sp"
+                android:textColor="#80000000"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="22dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/abeezee"
-                    android:text="@string/instagramtext"
-                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/myRecyclerViewCard4"
+                    app:spanCount="2"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     />
-            </LinearLayout>
+            </ScrollView>
 
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true" app:cardElevation="22dp"
-
-            android:backgroundTint="#10384C">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/faceBookCard"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/facebook"
-                android:scaleType="centerInside"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/facebook" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abeezee"
-                    android:text="@string/facebooktext"
-                    android:textColor="@color/white"/>
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardElevation="22dp"
-
-            android:backgroundTint="#10384C">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/twitterCard"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/twitter"
-                android:scaleType="centerInside"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/twitter" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abeezee"
-                    android:text="@string/twitter_x"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true" app:cardElevation="22dp"
-
-            android:backgroundTint="#10384C">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/linkedInCard"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/linkedin"
-                android:scaleType="centerInside"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/linkedin" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abeezee"
-                    android:text="@string/linkedintext"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="130dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            app:cardElevation="22dp"
-android:focusable="true"
-            android:clickable="true"
-            android:backgroundTint="#10384C">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/youtubeCard"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#00FFFFFF"
-                android:contentDescription="@string/youtube"
-                android:scaleType="centerInside"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/youtube" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/abeezee"
-                    android:text="@string/youtubetxt"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-    </GridLayout>
+    </ScrollView>
 </LinearLayout>
